@@ -13,12 +13,12 @@
 		437B68052378BBEA005ACB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437B68032378BBEA005ACB54 /* Main.storyboard */; };
 		437B68072378BBED005ACB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 437B68062378BBED005ACB54 /* Assets.xcassets */; };
 		437B680A2378BBED005ACB54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 437B68082378BBED005ACB54 /* LaunchScreen.storyboard */; };
-		437B68152378BBED005ACB54 /* FanbaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B68142378BBED005ACB54 /* FanbaseTests.swift */; };
 		437B68242378BE75005ACB54 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B68232378BE75005ACB54 /* DataService.swift */; };
 		437B68272378BF69005ACB54 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B68262378BF69005ACB54 /* Band.swift */; };
 		437B68292378BF75005ACB54 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B68282378BF75005ACB54 /* Album.swift */; };
 		437B682C2378C672005ACB54 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B682B2378C672005ACB54 /* Genre.swift */; };
 		437B682E2378CC56005ACB54 /* BandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B682D2378CC56005ACB54 /* BandCell.swift */; };
+		437B68322378E0F2005ACB54 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B68312378E0F2005ACB54 /* AlbumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +41,12 @@
 		437B68092378BBED005ACB54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		437B680B2378BBED005ACB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437B68102378BBED005ACB54 /* FanbaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanbaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		437B68142378BBED005ACB54 /* FanbaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanbaseTests.swift; sourceTree = "<group>"; };
-		437B68162378BBED005ACB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437B68232378BE75005ACB54 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		437B68262378BF69005ACB54 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		437B68282378BF75005ACB54 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		437B682B2378C672005ACB54 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		437B682D2378CC56005ACB54 /* BandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandCell.swift; sourceTree = "<group>"; };
+		437B68312378E0F2005ACB54 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				437B67FC2378BBEA005ACB54 /* Fanbase */,
-				437B68132378BBED005ACB54 /* FanbaseTests */,
 				437B67FB2378BBEA005ACB54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,15 +102,6 @@
 			path = Fanbase;
 			sourceTree = "<group>";
 		};
-		437B68132378BBED005ACB54 /* FanbaseTests */ = {
-			isa = PBXGroup;
-			children = (
-				437B68142378BBED005ACB54 /* FanbaseTests.swift */,
-				437B68162378BBED005ACB54 /* Info.plist */,
-			);
-			path = FanbaseTests;
-			sourceTree = "<group>";
-		};
 		437B681F2378BCE1005ACB54 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				437B682D2378CC56005ACB54 /* BandCell.swift */,
+				437B68312378E0F2005ACB54 /* AlbumCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,6 +253,7 @@
 				437B68292378BF75005ACB54 /* Album.swift in Sources */,
 				437B682E2378CC56005ACB54 /* BandCell.swift in Sources */,
 				437B682C2378C672005ACB54 /* Genre.swift in Sources */,
+				437B68322378E0F2005ACB54 /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				437B68152378BBED005ACB54 /* FanbaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

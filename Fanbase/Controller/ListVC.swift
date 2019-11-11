@@ -16,10 +16,7 @@ class ListVC: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        let bands = DataService.instance.getAllBands()
-        for band in bands {
-            print(band.name)
-        }
+
     }
 
 }
@@ -53,6 +50,7 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
+    
     
 }
 

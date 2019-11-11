@@ -4,10 +4,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ListVC-->
+        <!--Fanbase-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListVC" customModule="Fanbase" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTp-7T-1cb" userLabel="Band Table View">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="310" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTp-7T-1cb" userLabel="Band Table View">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BandCell" rowHeight="50" id="eKI-oP-fet" customClass="BandCell" customModule="Fanbase" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BandCell" rowHeight="310" id="eKI-oP-fet" customClass="BandCell" customModule="Fanbase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="310"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eKI-oP-fet" id="Iim-Be-Iic">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="310"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgX-sU-Ljq">
@@ -32,13 +33,69 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vtC-tX-qht" userLabel="Album Collection View">
+                                                    <rect key="frame" x="0.0" y="47.5" width="375" height="252.5"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B1j-5H-4ua">
+                                                        <size key="itemSize" width="180" height="250"/>
+                                                        <size key="estimatedItemSize" width="180" height="250"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="v0q-Ke-oTG" customClass="AlbumCell" customModule="Fanbase" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1.5" width="180" height="250"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Erb-dJ-TwJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="180" height="250"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music.note" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-is-kef">
+                                                                        <rect key="frame" x="18" y="8" width="144" height="144"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK2-4j-nzW">
+                                                                        <rect key="frame" x="18" y="161" width="144" height="56"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM8-e8-FcW">
+                                                                        <rect key="frame" x="18" y="214" width="144" height="28"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </collectionViewCellContentView>
+                                                            <color key="backgroundColor" white="0.78328339041095896" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <size key="customSize" width="180" height="250"/>
+                                                            <connections>
+                                                                <outlet property="albumImage" destination="rSz-is-kef" id="gnR-WV-rnI"/>
+                                                                <outlet property="albumTitle" destination="vK2-4j-nzW" id="YuV-0Q-DY4"/>
+                                                                <outlet property="albumYear" destination="GM8-e8-FcW" id="Lp8-iA-mXd"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vtC-tX-qht" secondAttribute="trailing" id="C9L-Hi-sth"/>
                                                 <constraint firstItem="vgX-sU-Ljq" firstAttribute="leading" secondItem="Iim-Be-Iic" secondAttribute="leadingMargin" id="S2O-r2-9LN"/>
+                                                <constraint firstItem="vtC-tX-qht" firstAttribute="leading" secondItem="Iim-Be-Iic" secondAttribute="leading" id="TOa-Lg-VxF"/>
                                                 <constraint firstItem="vgX-sU-Ljq" firstAttribute="top" secondItem="Iim-Be-Iic" secondAttribute="topMargin" id="f8q-2G-CxM"/>
+                                                <constraint firstAttribute="bottom" secondItem="vtC-tX-qht" secondAttribute="bottom" constant="10" id="m7s-Bh-U7B"/>
+                                                <constraint firstItem="vtC-tX-qht" firstAttribute="top" secondItem="vgX-sU-Ljq" secondAttribute="bottom" constant="10" id="vMf-37-jrL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="albumCollectionView" destination="vtC-tX-qht" id="Ik7-nl-FjO"/>
                                             <outlet property="nameLbl" destination="vgX-sU-Ljq" id="ZRv-a8-Ces"/>
                                         </connections>
                                     </tableViewCell>
@@ -54,14 +111,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XnC-Zg-HdA"/>
+                    <navigationItem key="navigationItem" title="Fanbase" id="XnC-Zg-HdA"/>
                     <connections>
                         <outlet property="tableView" destination="FTp-7T-1cb" id="gvq-ul-hDy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="99.456521739130437"/>
+            <point key="canvasLocation" x="136.80000000000001" y="99.400299850074973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7TS-RU-SJb">
@@ -80,4 +137,7 @@
             <point key="canvasLocation" x="-777" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="music.note" catalog="system" width="48" height="64"/>
+    </resources>
 </document>

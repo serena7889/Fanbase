@@ -17,13 +17,80 @@ class DataService {
     private let bands = [
                 
         Band(name: "Manchester Orchestra", genre: .altRock, albums: [
-            Album(title: "Like a Virgin Losing a Child", year: "2006", imageName: nil),
+            Album(title: "I'm Like a Virgin Losing a Child", year: "2006", imageName: nil),
             Album(title: "Mean Everything to Nothing", year: "2009", imageName: nil),
             Album(title: "Simple Math", year: "2011", imageName: nil),
             Album(title: "Cope", year: "2014", imageName: nil),
             Album(title: "Black Mile to the Surface", year: "2017", imageName: nil)
         ]),
         
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "1", year: "2006", imageName: nil),
+//            Album(title: "1", year: "2009", imageName: nil),
+//            Album(title: "1", year: "2011", imageName: nil),
+//            Album(title: "1", year: "2014", imageName: nil),
+//            Album(title: "1", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "2", year: "2006", imageName: nil),
+//            Album(title: "2", year: "2009", imageName: nil),
+//            Album(title: "2", year: "2011", imageName: nil),
+//            Album(title: "2", year: "2014", imageName: nil),
+//            Album(title: "2", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "3", year: "2006", imageName: nil),
+//            Album(title: "3", year: "2009", imageName: nil),
+//            Album(title: "3", year: "2011", imageName: nil),
+//            Album(title: "3", year: "2014", imageName: nil),
+//            Album(title: "3", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "4", year: "2006", imageName: nil),
+//            Album(title: "4", year: "2009", imageName: nil),
+//            Album(title: "4", year: "2011", imageName: nil),
+//            Album(title: "4", year: "2014", imageName: nil),
+//            Album(title: "4", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "5", year: "2006", imageName: nil),
+//            Album(title: "5", year: "2009", imageName: nil),
+//            Album(title: "5", year: "2011", imageName: nil),
+//            Album(title: "5", year: "2014", imageName: nil),
+//            Album(title: "5", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "5", year: "2006", imageName: nil),
+//            Album(title: "5", year: "2009", imageName: nil),
+//            Album(title: "5", year: "2011", imageName: nil),
+//            Album(title: "5", year: "2014", imageName: nil),
+//            Album(title: "5", year: "2017", imageName: nil)
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "6", year: "2006", imageName: nil),
+//        ]),
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "7", year: "2006", imageName: nil),
+//        ]),
+//
+//
+//        Band(name: "Manchester Orchestra", genre: .altRock, albums: [
+//            Album(title: "1", year: "2006", imageName: nil),
+//            Album(title: "2", year: "2009", imageName: nil),
+//            Album(title: "3", year: "2011", imageName: nil),
+//            Album(title: "4", year: "2014", imageName: nil),
+//            Album(title: "5", year: "2017", imageName: nil)
+//        ]),
+       
+        
+
         Band(name: "Paramore", genre: .altRock, albums: [
             Album(title: "All We Know is Falling", year: "2005", imageName: nil),
             Album(title: "Riot", year: "2007", imageName: nil),
@@ -31,16 +98,16 @@ class DataService {
             Album(title: "Paramore", year: "2013", imageName: nil),
             Album(title: "After Laughter", year: "2017", imageName: nil)
         ]),
-        
+
         Band(name: "Julien Baker", genre: .singerSongwriter, albums: [
             Album(title: "Sprained Ankle", year: "2015", imageName: nil),
             Album(title: "Turn Out The Lights", year: "2017", imageName: nil)
         ]),
-        
+
         Band(name: "Phoebe Bridgers", genre: .singerSongwriter, albums: [
             Album(title: "Stranger in the Alps", year: "2017", imageName: nil)
         ]),
-        
+
         Band(name: "The Swellers", genre: .popPunk, albums: [
             Album(title: "My Everest", year: "2007", imageName: nil),
             Album(title: "Ups and Downsizing", year: "2009", imageName: nil),
@@ -72,8 +139,6 @@ class DataService {
             return "Pop Punk"
         case .singerSongwriter:
             return "Singer Songwriter"
-        default:
-            return "Unknown"
         }
     }
     
